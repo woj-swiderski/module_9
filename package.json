@@ -1,0 +1,35 @@
+{
+  "name": "task_runner",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test:html",
+    "test:html": "nu-html-checker *.html",
+    "init-project": "npm install && npm-run-all init:*",
+    "init:dirs": "mkdir -p sass css vendor images js",
+    "init:files": "touch README.md index.html sass/style.scss js/script.js",
+    "init:gitignore": "curl https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore -o .gitignore",
+    "build": "npm-run-all build:* test",
+    "build:sass": "node-sass --output-style compact -o css sass",
+    "build:autoprefixer": "autoprefixer-cli css/style.css",
+    "build-dev:sass": "node-sass --output-style expanded --source-map true -o css sass",
+    "watch": "npm-run-all watch:*",
+    "watch:browsersync": "browser-sync start --server --files css/*.css *.html",
+    "watch:sassprefixer": "npm-run-all watch:run*",
+    "watch:runa": "node-sass --output-style expanded --source-map true -o css sass",
+    "watch:runb": "onchange -d 100 css/style.css -- autoprefixer-cli -o css/style.prefixed.css css/style.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nu-html-checker": "^0.1.0"
+  },
+  "devDependencies": {
+    "autoprefixer-cli": "^1.0.0",
+    "browser-sync": "^2.26.3",
+    "node-sass": "^4.10.0",
+    "onchange": "^5.1.0"
+  },
+  "description": ""
+}
