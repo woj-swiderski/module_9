@@ -1,16 +1,6 @@
 @import 'variables'
-// import mixins
-@import 'reset'
-
-// font-family: 'Norican', cursive;
-// font-family: 'Roboto', sans-serif;
-
-ul
-    margin: 0
-    padding: 0
-
-li
-    padding-left: 1em
+@import 'mixins'
+// @import 'reset'
 
 a
     text-decoration: none
@@ -22,24 +12,24 @@ a
         color: inherit
 
 .menu_header
-    display: inline
-    font-family: 'Norican', cursive
-    font-size: 24px
-    margin-left: 10%
+    display: inline-block
+    width: 80%
+    margin-left: 1em
+    @include norican(24px)
+    color: white
 
 .flexer 
     display: flex
     flex-direction: row
     flex-wrap: wrap
     justify-content: center
-    max-width: 1280px
+    max-width: $max_width
     margin: 0 auto
 
 .left
-    width: 188px
+    width: $left_width
     height: 100vh
-    background: rgb(165, 165, 165)
-    display: block
+    background: $c_menu_black
 
 .container 
     width: 60%
@@ -49,7 +39,6 @@ a
     width: 100%
     height: 60px
     background: rgb(180, 255, 180)
-    display: block
 
 .central, .tabler 
     width: 90%
@@ -62,55 +51,35 @@ a
     width: 80%
     margin: 0 auto
 
-
 /* ============= toggler ============= */
-#expand-toggle 
-    display: none
-  
-  
-.expandable 
-    display: block
-    height: 39px
-    width: 100%
 
-    font-size: 14px
-    line-height: 42px
-    color: $c_menu_gray
-    background: silver
-    box-sizing: border-box
-    overflow: hidden
-    &:hover
-        border-left: 4px solid $c_menu_orange
-        background: $c_menu_black
-        color: $c_white
-
-
-.expandable
-    list-style-image: url("../images/details.svg")
-
-.expandable._b
-    list-style: url("../images/links.svg")
-
-/* Style the button */
-#expand-btn 
-    display: inline-block
-    margin-top: 12px
-    margin-left: 2em
-    border: 1px solid
-    border-radius: 3px
-
-
-#expand-toggle:checked ~ * .expandable 
-    max-height: 100%
-
-
-.menu
-    width: 100%
-    padding: 0
-    margin: 0
-
-    
 .a 
     position: fixed
     width: inherit
     top: 20px
+    > ul
+        margin: 0
+        margin-top: 1em
+        padding: 0
+        display: block
+        width: 100%
+        list-style: none
+        > li
+            display: block
+            list-style: none // unnecessary
+            border-left: 4px solid $c_menu_black
+            padding-left: 40px
+            height: 39px
+            line-height: 42px
+            @include roboto14()
+            color: $c_menu_gray
+
+            &:hover
+                border-left: 4px solid $c_menu_orange
+                color: $c_white
+                background-color: $c_menu_black
+
+    .fas.fa-bars
+        // font-weight: 300
+        color: $c_menu_gray
+        margin-left: 1em
