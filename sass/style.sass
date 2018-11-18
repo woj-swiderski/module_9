@@ -1,5 +1,31 @@
-import 'variables'
-import 'mixins'
+@import 'variables'
+// import mixins
+@import 'reset'
+
+// font-family: 'Norican', cursive;
+// font-family: 'Roboto', sans-serif;
+
+ul
+    margin: 0
+    padding: 0
+
+li
+    padding-left: 1em
+
+a
+    text-decoration: none
+    text-color: $c_white
+    display: block
+    width: 100%
+    cursor: pointer
+    &:visited
+        color: inherit
+
+.menu_header
+    display: inline
+    font-family: 'Norican', cursive
+    font-size: 24px
+    margin-left: 10%
 
 .flexer 
     display: flex
@@ -11,7 +37,7 @@ import 'mixins'
 
 .left
     width: 188px
-    height: 1724px /* or 1724 ? */
+    height: 100vh
     background: rgb(165, 165, 165)
     display: block
 
@@ -44,16 +70,32 @@ import 'mixins'
   
 .expandable 
     display: block
-    max-height: 0
-    overflow: hidden
-    width: 5em
-    background: gray
+    height: 39px
+    width: 100%
 
+    font-size: 14px
+    line-height: 42px
+    color: $c_menu_gray
+    background: silver
+    box-sizing: border-box
+    overflow: hidden
+    &:hover
+        border-left: 4px solid $c_menu_orange
+        background: $c_menu_black
+        color: $c_white
+
+
+.expandable
+    list-style-image: url("../images/details.svg")
+
+.expandable._b
+    list-style: url("../images/links.svg")
 
 /* Style the button */
 #expand-btn 
     display: inline-block
     margin-top: 12px
+    margin-left: 2em
     border: 1px solid
     border-radius: 3px
 
@@ -62,6 +104,13 @@ import 'mixins'
     max-height: 100%
 
 
+.menu
+    width: 100%
+    padding: 0
+    margin: 0
+
+    
 .a 
     position: fixed
+    width: inherit
     top: 20px
