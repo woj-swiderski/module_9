@@ -69,7 +69,6 @@ a:visited {
   padding: 0;
   display: block;
   width: 100%;
-  list-style: none;
 }
 .a > ul > li {
   display: block;
@@ -83,22 +82,15 @@ a:visited {
   font-weight: 300;
   color: #999999;
 }
-.a > ul > li::before {
-  content: "";
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  color: white;
-  background-image: url("./images/details.svg");
-}
 .a > ul > li:hover {
   border-left: 4px solid #f58220;
   color: white;
-  background-color: #191919;
+  background-color: #282828;
 }
 .a .fas.fa-bars {
   color: #999999;
   margin-left: 1em;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */

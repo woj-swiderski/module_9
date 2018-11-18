@@ -57,13 +57,14 @@ a
     position: fixed
     width: inherit
     top: 20px
+
     > ul
         margin: 0
         margin-top: 1em
         padding: 0
         display: block
         width: 100%
-        list-style: none
+
         > li
             display: block
             list-style: none // unnecessary
@@ -77,9 +78,10 @@ a
             &:hover
                 border-left: 4px solid $c_menu_orange
                 color: $c_white
-                background-color: $c_menu_black
+                background-color: $c_menu_item_black
 
     .fas.fa-bars
         // font-weight: 300
         color: $c_menu_gray
         margin-left: 1em
+        cursor: pointer
