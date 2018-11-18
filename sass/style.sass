@@ -1,2 +1,67 @@
 import 'variables'
 import 'mixins'
+
+.flexer 
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: center
+    max-width: 1280px
+    margin: 0 auto
+
+.left
+    width: 188px
+    height: 1724px /* or 1724 ? */
+    background: rgb(165, 165, 165)
+    display: block
+
+.container 
+    width: 60%
+    background: rgb(255, 201, 255)
+
+.finder 
+    width: 100%
+    height: 60px
+    background: rgb(180, 255, 180)
+    display: block
+
+.central, .tabler 
+    width: 90%
+    height: 500px
+    background: rgb(159, 255, 247)
+    display: block
+    margin: 1em auto
+
+.links 
+    width: 80%
+    margin: 0 auto
+
+
+/* ============= toggler ============= */
+#expand-toggle 
+    display: none
+  
+  
+.expandable 
+    display: block
+    max-height: 0
+    overflow: hidden
+    width: 5em
+    background: gray
+
+
+/* Style the button */
+#expand-btn 
+    display: inline-block
+    margin-top: 12px
+    border: 1px solid
+    border-radius: 3px
+
+
+#expand-toggle:checked ~ * .expandable 
+    max-height: 100%
+
+
+.a 
+    position: fixed
+    top: 20px
