@@ -2,6 +2,10 @@
 @import 'mixins'
 // @import 'reset'
 
+h1 
+    margin: 0
+    padding: 0
+
 a
     text-decoration: none
     text-color: $c_white
@@ -10,6 +14,25 @@ a
     cursor: pointer
     &:visited
         color: inherit
+
+.button
+    @include roboto18_300()
+    color: white
+    line-height: 42px
+    height: 40px
+    min-width: 126px
+    background-color: $c_menu_orange
+    display: block
+    margin: 0 auto
+    margin-top: 1em
+    margin-bottom: 1em
+    
+    cursor: pointer
+    border: none
+    border-radius: 3px
+    &:hover
+        color: $c_menu_gray
+
 
 .menu_header
     display: inline-block
@@ -28,28 +51,77 @@ a
 
 .left
     width: $left_width
-    height: 100vh
+    min-height: 100vh
     background: $c_menu_black
 
-.container 
-    width: 60%
-    background: rgb(255, 201, 255)
+.container
+    display: flex
+    flex-direction: column
+    background: $c_container_background
+    min-width: 1092px
 
-.finder 
-    width: 100%
+.topbar
+    position: fixed
+    min-width: 1092px
+    margin: auto
+    padding: 0 
     height: 60px
     background: rgb(180, 255, 180)
 
 .central, .tabler 
-    width: 90%
-    height: 500px
-    background: rgb(159, 255, 247)
-    display: block
-    margin: 1em auto
+    width: 1056px
+    margin: auto
+    padding-bottom: 1em
+    background: $c_white
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1)
+    h2
+        text-transform: uppercase
+        border-bottom: 1px solid $c_line_color
+        @include roboto16_500()
+        color: $c_container_gray
+        padding-left: 1em
+        line-height: 42px
+        text-align: left
 
-.links 
-    width: 80%
+.central
+    margin-top: 60px
+
+.image 
+    width: 800px
+    height: 500px
+    background-color: blue
     margin: 0 auto
+
+.links
+    width: 686px
+    border-collapse: collapse
+    margin: 0 auto
+
+    img
+        width: 15px
+        height: 15px
+        display: inline-block
+        margin-left: 15px
+
+    tr 
+        height: 58px
+        border: 1px solid $c_line_color
+        border-left: none
+        border-right: none
+        &:hover
+            background-color: $c_table_background
+
+    td
+        @include roboto16_700()
+        color: $c_container_gray
+        line-height: 17px
+        text-align: left
+        vertical-align: middle
+    
+        &:nth-child(2n)
+            @include roboto16_300()
+            color: $c_table_link
+
 
 /* ============= toggler ============= */
 
@@ -72,7 +144,7 @@ a
             padding-left: 40px
             height: 39px
             line-height: 42px
-            @include roboto14()
+            @include roboto14_300()
             color: $c_menu_gray
 
             &:hover
@@ -81,7 +153,6 @@ a
                 background-color: $c_menu_item_black
 
     .fas.fa-bars
-        // font-weight: 300
         color: $c_menu_gray
         margin-left: 1em
         cursor: pointer

@@ -1,3 +1,8 @@
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
 a {
   text-decoration: none;
   text-color: white;
@@ -7,6 +12,27 @@ a {
 }
 a:visited {
   color: inherit;
+}
+
+.button {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  color: white;
+  line-height: 42px;
+  height: 40px;
+  min-width: 126px;
+  background-color: #f58220;
+  display: block;
+  margin: 0 auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  cursor: pointer;
+  border: none;
+  border-radius: 3px;
+}
+.button:hover {
+  color: #999999;
 }
 
 .menu_header {
@@ -29,32 +55,90 @@ a:visited {
 
 .left {
   width: 188px;
-  height: 100vh;
+  min-height: 100vh;
   background: #191919;
 }
 
 .container {
-  width: 60%;
-  background: #ffc9ff;
+  display: flex;
+  flex-direction: column;
+  background: gray;
+  min-width: 1092px;
 }
 
-.finder {
-  width: 100%;
+.topbar {
+  position: fixed;
+  min-width: 1092px;
+  margin: auto;
+  padding: 0;
   height: 60px;
   background: #b4ffb4;
 }
 
 .central, .tabler {
-  width: 90%;
+  width: 1056px;
+  margin: auto;
+  padding-bottom: 1em;
+  background: white;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+.central h2, .tabler h2 {
+  text-transform: uppercase;
+  border-bottom: 1px solid #e3e3e3;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #a6a6a6;
+  padding-left: 1em;
+  line-height: 42px;
+  text-align: left;
+}
+
+.central {
+  margin-top: 60px;
+}
+
+.image {
+  width: 800px;
   height: 500px;
-  background: #9ffff7;
-  display: block;
-  margin: 1em auto;
+  background-color: blue;
+  margin: 0 auto;
 }
 
 .links {
-  width: 80%;
+  width: 686px;
+  border-collapse: collapse;
   margin: 0 auto;
+}
+.links img {
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  margin-left: 10px;
+}
+.links tr {
+  height: 58px;
+  border: 1px solid #e3e3e3;
+  border-left: none;
+  border-right: none;
+}
+.links tr:hover {
+  background-color: rgba(177, 191, 191, 0.48);
+}
+.links td {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #a6a6a6;
+  line-height: 17px;
+  text-align: left;
+  vertical-align: middle;
+}
+.links td:nth-child(2n) {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #56819f;
 }
 
 /* ============= toggler ============= */
