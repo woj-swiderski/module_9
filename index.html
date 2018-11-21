@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Norican|Roboto" rel="stylesheet"> 
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/style.css">
-    <title>module 9</title>
+    <title>Main page</title>
 </head>
 <body>
     <div class="flexer">
@@ -19,13 +19,13 @@
                 </div>
                 
                 <ul id="menu" class="menu">
-                        <li><a href="#">General</a></li>
-                        <li><a href="#">Details</a></li>
-                        <li><a href="#">Links</a></li>
-                        <li><a href="#">Banners</a></li>
-                        <li><a href="#">Personal data</a></li>
-                        <li><a href="#">Payout</a></li>
-                        <li><a href="#">Postback</a></li>
+                        <li id="general"><a href="#">General</a></li>
+                        <li id="details"><a href="#">Details</a></li>
+                        <li id="links"><a href="#">Links</a></li>
+                        <li id="banners"><a href="#">Banners</a></li>
+                        <li id="personal"><a href="#">Personal data</a></li>
+                        <li id="payout"><a href="#">Payout</a></li>
+                        <li id="postback"><a href="#">Postback</a></li>
                 </ul>
             </div>
         </div>
@@ -39,6 +39,7 @@
             <section>
             <div class="central">
                 <h1>sekcja z obrazkiem</h1>
+                <p id='msg'></p>
                 <div class="selector"><input type="text"></div>
                 <div class="image"></div>
             </div>
@@ -50,12 +51,12 @@
                 <input type="submit" class="button" value="add"/>
                 <table class="links">
                     <tbody>
-                        <tr><td>Home page</td><td><a href="#">http://www.homepage.com</a></td><td><img src='./images/links.svg'/><img src='./images/trash.svg'/></td></tr>
-                        <tr><td>Home page</td><td><a href="#">http://www.homepage.com</a></td><td></td></tr>
-                        <tr><td>Home page</td><td><a href="#">http://www.homepage.com</a></td><td></td></tr>
-                        <tr><td>Home page</td><td><a href="#">http://www.homepage.com</a></td><td></td></tr>
-                        <tr><td>Home page</td><td><a href="#">http://www.homepage.com</a></td><td></td></tr>
-                        <tr><td>Home page</td><td><a href="#">http://www.homepage.com</a></td><td></td></tr>
+                        <tr><td>Home page</td><td><a href="#">http://www.homepage.com</a></td><td class="ico"><img src='./images/links.svg'/><img src='./images/trash.svg'/></td></tr>
+                        <tr><td>Offer</td><td><a href="#">http://www.currently.com</a></td><td  class="ico"></td></tr>
+                        <tr><td>Your Site</td><td><a href="#">http://www.yoursite.com</a></td><td class="ico"></td></tr>
+                        <tr><td>Twitter</td><td><a href="#">http://www.twitter.com</a></td><td  class="ico"></td></tr>
+                        <tr><td>Project Gutenberg</td><td><a href="#">http://www.gutenberg.org</a></td><td  class="ico"></td></tr>
+                        <tr><td class="site">Very long homepage title and more</td><td><a href="#">http://www.very_long_homepage_address_and_more.gov</a></td><td class="ico">&nbsp;</td></tr>
                     </tbody>
                 </table>
                 <input type="submit" class="button" value="add"/>

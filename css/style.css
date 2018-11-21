@@ -114,7 +114,7 @@ a:visited {
   width: 15px;
   height: 15px;
   display: inline-block;
-  margin-left: 10px;
+  margin-left: 15px;
 }
 .links tr {
   height: 58px;
@@ -133,12 +133,19 @@ a:visited {
   line-height: 17px;
   text-align: left;
   vertical-align: middle;
+  overflow: hidden;
 }
 .links td:nth-child(2n) {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 500;
   color: #56819f;
+  padding-left: 10px;
+}
+
+table.links td.ico {
+  width: 80px;
+  background: red;
 }
 
 /* ============= toggler ============= */
